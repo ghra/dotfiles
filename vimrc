@@ -1,3 +1,5 @@
+set t_Co=256
+
 
 " load NeoBundle
 if has('vim_starting')
@@ -15,6 +17,9 @@ NeoBundle 'Shougo/vimproc'
 
 NeoBundle 'bling/vim-airline'
 
+" git utility
+NeoBundle 'tpope/vim-fugitive'
+
 filetype on
 filetype plugin on
 filetype indent on
@@ -24,9 +29,24 @@ NeoBundleCheck
 
 
 
+
+" ============== Restore last position ============
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+
 "============== Airline Config ===================
 "let g:airline_powerline_fonts = 1
-"set encoding=utf-8
+set encoding=utf-8
 "if $COLORTERM == 'gnome-terminal'
 "  set t_Co=256
 "endif
@@ -36,10 +56,14 @@ NeoBundleCheck
 "  let g:airline_symbols = {}
 "endif
 "let g:airline_symbols.space = "\ua0"
+set laststatus=2
 
 
 
 
+
+"Store lots of :cmdline history
+set history=1000
 
 set nowrap
 set tabstop=4
