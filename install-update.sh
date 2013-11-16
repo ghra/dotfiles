@@ -44,3 +44,11 @@ else
 	echo "updating ~/.bashrc to load ~/.bashrc_private"
 	echo "source ~/.bashrc_private" >>~/.bashrc
 fi
+
+if [[ -d ~/.vim/bundle/neobundle.vim ]]; then
+	echo "calling 'git fetch' for ~/.vim/bundle/neobundle.vim"
+	(cd ~/.vim/bundle/neobundle.vim; git fetch)
+else
+	mkdir -p ~/.vim/bundle/
+	git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+fi
