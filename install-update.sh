@@ -33,7 +33,9 @@ for file in \
 	git-flow-completion.bash \
 	git-completion.sh \
 	git-prompt.sh \
-	bashrc_private
+	bashrc_private \
+	vimrc \
+	screenrc
 do
 	install_or_update "${file}" "${HOME}/.${file}";
 done
