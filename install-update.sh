@@ -35,7 +35,8 @@ for file in \
 	git-prompt.sh \
 	bashrc_private \
 	vimrc \
-	screenrc
+	screenrc \
+	tmux.conf
 do
 	install_or_update "${file}" "${HOME}/.${file}";
 done
