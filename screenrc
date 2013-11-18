@@ -1,0 +1,4 @@
+scrollback 100000
+hardstatus on 
+hardstatus alwayslastline 
+hardstatus string "%{.bK}%-w%{.rW}%n %t%{-}%+w %=%{= kw} %Y-%m-%d %c:%s"
