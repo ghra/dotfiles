@@ -20,6 +20,9 @@ NeoBundle 'bling/vim-airline'
 " git utility
 NeoBundle 'tpope/vim-fugitive'
 
+" python jedi
+NeoBundle 'davidhalter/jedi-vim'
+
 filetype on
 filetype plugin on
 filetype indent on
@@ -114,6 +117,10 @@ map <F5> :set background=dark<CR>:hi Comment guifg=DarkGrey ctermfg=DarkGrey<CR>
 map <F6> :set background=light<CR>:hi Comment guifg=Grey ctermfg=Grey<CR>:hi SpecialKey guifg=DarkBlue ctermfg=DarkBlue<CR>
 map <F7> :set background=light<CR>:hi Comment guifg=LightBlue ctermfg=LightBlue<CR>:hi SpecialKey guifg=DarkBlue ctermfg=DarkBlue<CR>
 map <C-L> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+" kolory, niezaleznie od powyzszych, dla jasnego tla:
+hi Comment guifg=LightBlue ctermfg=LightBlue
+hi Constant guifg=DarkGrey ctermfg=DarkGrey
+hi jediFat term=bold,underline cterm=bold,underline ctermbg=0 ctermfg=Grey gui=bold,underline guifg=White guibg=#555555
 
 " omni-complete, czyli Ctrl+X
 autocmd FileType python set omnifunc=pythoncomplete#Complete
