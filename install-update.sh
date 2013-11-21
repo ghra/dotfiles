@@ -29,6 +29,8 @@ function install_or_update ()
 }
 
 
+# copy dot-file entries
+
 for file in \
 	git-flow-completion.bash \
 	git-completion.sh \
@@ -41,6 +43,9 @@ do
 	install_or_update "${file}" "${HOME}/.${file}";
 done
 
+
+# setup .bashrc_private
+
 if grep -q "source ~/.bashrc_private" "${HOME}/.bashrc"; then
 	echo "~/.bashrc still loading ~/.bashrc_private"
 else
@@ -49,9 +54,15 @@ else
 fi
 
 if [[ -d ~/.vim/bundle/neobundle.vim ]]; then
+	# FIXME: do we really need this?
 	echo "calling 'git fetch' for ~/.vim/bundle/neobundle.vim"
 	(cd ~/.vim/bundle/neobundle.vim; git fetch)
 else
 	mkdir -p ~/.vim/bundle/
 	git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
+
+# load submodules
+
+echo "git init neobundle.vim submodule"
+(git submodule init && git submodule update)
