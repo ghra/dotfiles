@@ -21,7 +21,17 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
 
 " python jedi
-NeoBundle 'davidhalter/jedi-vim'
+"NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}} "{{{
+"	let g:jedi#popup_on_dot=0
+"	let g:jedi#completions_enabled = 0
+""}}}
+
+NeoBundle 'scrooloose/syntastic' "{{{
+	"let g:syntastic_check_on_open=1
+	let g:syntastic_enable_balloons = 0
+	let g:syntastic_python_checkers = ['flake8']
+"}}}
 
 filetype on
 filetype plugin on
@@ -136,7 +146,7 @@ autocmd FileType python setlocal
 	\ tabstop=4
 	\ softtabstop=4
 	\ shiftwidth=4 
-	\ textwidth=80
+	\ textwidth=120
 	\ smarttab
 	\ expandtab
 
