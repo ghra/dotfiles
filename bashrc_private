@@ -75,7 +75,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # beloved dir color for light console
-LS_COLORS=di=33
+LS_COLORS=di=33:ex=32
 
 
 #====================
