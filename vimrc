@@ -37,10 +37,21 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" golang syntax, compiler etc
+NeoBundle 'jnwhiteh/vim-golang'
+
 " NeoBundle installation check
 NeoBundleCheck
 
 
+" ============== jnwhiteh/vim-golang setup ==============
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 
 " ============== Restore last position ============
