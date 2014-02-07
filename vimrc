@@ -31,6 +31,8 @@ NeoBundle 'scrooloose/syntastic' "{{{
 	"let g:syntastic_check_on_open=1
 	let g:syntastic_enable_balloons = 0
 	let g:syntastic_python_checkers = ['flake8']
+	let g:syntastic_c_checkers = ['cppcheck', 'make']
+	let g:syntastic_cpp_checkers = ['cppcheck', 'make']
 "}}}
 
 filetype on
