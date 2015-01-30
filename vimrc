@@ -6,7 +6,7 @@ if has('vim_starting')
 	set nocompatible               " Be iMproved
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -48,6 +48,7 @@ NeoBundle 'sprsquish/thrift.vim'
 " NeoBundle installation check
 NeoBundleCheck
 
+call neobundle#end()
 
 " ============== jnwhiteh/vim-golang setup ==============
 " Some Linux distributions set filetype in /etc/vimrc.
