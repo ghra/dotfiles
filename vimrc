@@ -140,6 +140,9 @@ set wildmenu
 " na przyklad to co w ostatnim insercie zostalo dodane)
 set bs=2
 
+" More context for vimdiff
+set diffopt=filler,context:20
+
 " Domyslne kodowanie znakow:
 set encoding=utf8
 "set encoding=iso8859-2
