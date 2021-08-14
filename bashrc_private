@@ -17,6 +17,9 @@ HISTSIZE=800000
 HISTFILESIZE=800000
 HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 
+# save bash history after each command, don't wait to (gently) exit
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
+
 
 #====================
 # window size
