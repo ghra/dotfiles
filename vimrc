@@ -152,6 +152,9 @@ set encoding=utf8
 "set encoding=iso8859-2
 "set fileencoding=iso8859-2
 
+" Never ever use weak encription as default
+set cryptmethod=blowfish2
+
 " Nacisne F5 to przejdzie mi na ciemne tlo i ciemnosielone komentarze
 " Nacisne F6 to przejdzie mi na jasne tlo i zielone komentarze
 map <F5> :set background=dark<CR>:hi Comment guifg=DarkGrey ctermfg=DarkGrey<CR>:hi Pmenu ctermbg=Grey ctermfg=Black<CR>:hi PmenuSel ctermbg=Red ctermfg=White<CR>
