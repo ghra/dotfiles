@@ -52,6 +52,14 @@ NeoBundle 'jnwhiteh/vim-golang'
 " syntax for thrift files
 NeoBundle 'sprsquish/thrift.vim'
 
+" Elixir
+NeoBundle 'elixir-editors/vim-elixir'
+
+" Terraform
+NeoBundle 'hashivim/vim-terraform' "{{{
+	let g:terraform_align=1
+"}}}
+
 " NeoBundle installation check
 NeoBundleCheck
 
