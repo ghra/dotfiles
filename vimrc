@@ -6,7 +6,7 @@ if has('vim_starting')
 	set nocompatible               " Be iMproved
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -63,6 +63,8 @@ NeoBundle 'hashivim/vim-terraform' "{{{
 " NeoBundle installation check
 NeoBundleCheck
 
+call neobundle#end()
+
 " ============== jnwhiteh/vim-golang setup ==============
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
@@ -100,12 +102,6 @@ set encoding=utf-8
 "endif
 "let g:airline_symbols.space = "\ua0"
 set laststatus=2
-
-"Store lots of :cmdline history
-set history=1000
-
-set nowrap
-set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
@@ -183,5 +179,3 @@ autocmd FileType python setlocal
 	\ textwidth=256
 	\ smarttab
 	\ expandtab
-
-
