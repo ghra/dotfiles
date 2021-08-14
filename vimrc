@@ -101,15 +101,13 @@ set encoding=utf-8
 "let g:airline_symbols.space = "\ua0"
 set laststatus=2
 
-
-
-
-
 "Store lots of :cmdline history
 set history=1000
 
 set nowrap
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 "   set background=dark
 "   highlight Comment guifg=DarkGreen ctermfg=DarkGreen
@@ -179,7 +177,8 @@ autocmd FileType python setlocal
 	\ tabstop=4
 	\ softtabstop=4
 	\ shiftwidth=4 
-	\ textwidth=120
+	\ textwidth=256
 	\ smarttab
 	\ expandtab
+
 
